@@ -1,0 +1,25 @@
+.go-to-top-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.go-to-top-button {
+  padding: 10px 11px;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.go-to-top-button:hover {
+  background-color: #0056b3;
+}
+
+.go-to-top-container.show {
+  opacity: 1;
+}
