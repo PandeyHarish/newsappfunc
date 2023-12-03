@@ -69,7 +69,7 @@ const Newscomponent= (props) => {
 
     return (
       <>
-        <h2 className="text-center" style={{ margin: "35px 0px" }}>
+        <h2 className="text-center" style={{ margin: "90px 0px 35px 0px" }}>
           Top {capitalize(props.category)} Headlines
         </h2>
         {loading && <Spinner />}
