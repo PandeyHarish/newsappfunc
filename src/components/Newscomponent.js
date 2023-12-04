@@ -12,7 +12,7 @@ const Newscomponent= (props) => {
   const [page, setpage] = useState(1);  
   const [totalResults, settotalResults] = useState(0);  
   
-    // document.title = `News app - ${this.capitalize(props.category)}`;
+    
   
 
  const capitalize = (s) => {
@@ -39,7 +39,9 @@ const Newscomponent= (props) => {
   }
 
   useEffect(() => {
+    document.title = `News app - ${this.capitalize(props.category)}`;
     updateNews();
+    // eslint-disable-next-line
   },[]
     );
   
@@ -50,6 +52,7 @@ const Newscomponent= (props) => {
       const nextPageUrl = `https://newsapi.org/v2/top-headlines?country=${props.country}&apiKey=${apiKey}&category=${props.category}&pageSize=${
         props.pageSize
       }&page=${page + 1}`;
+      setpage(page+1);
       const data = await fetch(nextPageUrl);
       if (!data.ok) {
         throw new Error("Failed to fetch additional data");
