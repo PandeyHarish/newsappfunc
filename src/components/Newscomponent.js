@@ -39,7 +39,7 @@ const Newscomponent= (props) => {
   }
 
   useEffect(() => {
-    document.title = `News app - ${this.capitalize(props.category)}`;
+    document.title = `News app - ${capitalize(props.category)}`;
     updateNews();
     // eslint-disable-next-line
   },[]
